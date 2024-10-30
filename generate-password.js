@@ -15,14 +15,20 @@ class generatePassword {
   generate(e) {
     e.preventDefault();
     this.password = "";
-    this.randomFromString(this.lowercaseLetters);
+    let characterPool = "";
+
     this.checkboxes.forEach((checkbox) => {
       if (checkbox.checked) {
-        for (let i = 0; i <= this.inputLength.value - 1; i++) {
-          this.password += this.randomFromString(this[checkbox.value]);
-        }
+        characterPool += this[checkbox.value];
       }
     });
+    if (characterPool.length === 0) {
+      alert("Sélectionnez au moins un type de caractère !");
+      return;
+    }
+    for (let i = 0; i <= this.inputLength.value - 1; i++) {
+      this.password += this.randomFromString(characterPool);
+    }
 
     this.displayPassword();
   }
