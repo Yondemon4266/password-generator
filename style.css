@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: white;
+    text-shadow: 1px 1px 9px black;
+    font-size: 20px;
+}
+
+
+
+
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: rgb(192, 26, 34);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    padding: 20px;
+    background: rgb(226, 38, 51);
+    border-radius: 6px;
+    gap: 20px;
+}
+h1 {
+    margin: 10px;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 7px rgb(182, 182, 182);
+
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    padding: 10px;
+    background: rgb(240, 83, 94);
+}
+
+svg {
+    width: 32px;
+    height: 48px;
+    cursor: pointer;
+    fill: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    cursor: pointer;
+}
+input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+
+    cursor: pointer;
+}
+#inputLength {
+    width: 20%;
+    text-align: center;
+    color: black;
+    text-shadow: none;
+}
+
+
+#submitButton {
+    padding: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    border: none;
+    background: rgb(41, 1, 1);
+    border-radius: 12px;
+    justify-self: flex-end;
+}
+#submitButton:hover {
+    text-shadow: 1px 1px 12px black;
+
+}
+
+#passwordDisplay {
+    font-size: 26px;
+}
+
+
+@media (max-width: 768px) {
+    * {
+        font-size: 15px;
+    }
+    input[type="checkbox"] {
+        height: 15px;
+        width: 15px;
+    }
+    .container {
+        width: 350px;
+        padding: 10px;
+
+    }
+    #passwordDisplay {
+        font-size: 20px;
+    }
+}
