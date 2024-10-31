@@ -8,6 +8,13 @@ class generatePassword {
     this.lowercaseLetters = this.uppercaseLetters.toLowerCase();
     this.numbers = "0123456789";
     this.symbols = "&é'()-èç@)%";
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        console.log(e);
+
+        this.generate(e);
+      }
+    });
     this.optionsForm.addEventListener("submit", (e) => this.generate(e));
     this.password = "";
   }
